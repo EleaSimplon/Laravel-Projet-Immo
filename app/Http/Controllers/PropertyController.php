@@ -18,4 +18,9 @@ class PropertyController extends Controller
             ->json(Property::find($id));
         return $properties;
     }
+
+    public function delete($id){
+        $prop = Property::find($id);
+        $prop->delete();
+    }
 }

@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/property/all', [PropertyController::class, 'all']);
 Route::get('/property/detail/{id}', [PropertyController::class, 'detail']);
+Route::post('/property/add', [PropertyController::class, 'add']);
+Route::delete('/property/delete/{id}', [PropertyController::class, 'delete']);
